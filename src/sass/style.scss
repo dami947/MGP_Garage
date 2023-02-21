@@ -1,0 +1,381 @@
+@use './colors' as colors;
+@use './components' as *;
+@use './mixins' as *;
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: colors.$gray;
+}
+
+.nav {
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    @include dFlexColumnJccAic;
+    background-color: colors.$darkGray;
+    transform: translateX(-102%);
+    transition: transform 0.4s linear;
+    z-index: 100;
+
+    img {
+      padding: 3rem 0;
+      width: 100px;
+    }
+  }
+  &__link {
+    padding: 3rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: colors.$white;
+    text-decoration: none;
+    transition: color 0.2s linear;
+
+    &:hover {
+      color: colors.$mainColor;
+    }
+  }
+
+  .hamburger {
+    position: fixed;
+    padding: 2rem;
+    &-inner,
+    &-inner::before,
+    &-inner::after {
+      background-color: colors.$mainColor;
+      width: 50px;
+      height: 5px;
+      z-index: 1000;
+    }
+    z-index: 1000;
+  }
+
+  .hamburger.is-active .hamburger-inner:before {
+    background-color: colors.$mainColor;
+  }
+
+  .hamburger.is-active .hamburger-inner:after {
+    background-color: colors.$mainColor;
+  }
+}
+
+.nav-active {
+  transform: translateX(0);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  &__img {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../dist/img/header-img.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+  }
+
+  &__text {
+    @include dFlexColumnJccAic;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+
+    img {
+      width: 350px;
+    }
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    padding: 0.8rem 2.4rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: colors.$white;
+    background-color: colors.$mainColor;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &::before {
+      background-color: colors.$mainColorDark;
+    }
+  }
+
+  &__text-desktop {
+    display: none;
+  }
+}
+
+.aboutus {
+  padding: 0 1rem;
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 3rem;
+  }
+
+  &__text {
+    grid-column: 1/3;
+    padding: 2rem;
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: colors.$white;
+
+    background-color: colors.$darkGray;
+    border-radius: 25px;
+
+    h2 {
+      padding: 2rem 0;
+      font-size: 2.8rem;
+      line-height: 110%;
+      text-transform: uppercase;
+    }
+  }
+
+  &__photos {
+    padding-top: 2rem;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    &--one,
+    &--two,
+    &--three {
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+      }
+    }
+
+    &--one {
+      grid-column: 1/3;
+      img {
+        height: 300px;
+      }
+    }
+    &--two {
+      grid-column: 1/2;
+      img {
+        height: 100%;
+      }
+    }
+    &--three {
+      grid-column: 2/3;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  &__photos-two {
+    padding-top: 2rem;
+    grid-column: 1/3;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 25px;
+    }
+  }
+
+  &__social-media {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 2rem 0;
+    gap: 2rem;
+
+    .instagram-box,
+    .facebook-box,
+    .youtube-box,
+    .tiktok {
+      a {
+        @include dFlexColumnJccAic;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: colors.$white;
+        transition: color 0.2s linear;
+      }
+
+      img {
+        width: 45px;
+        transition: transform 0.2s linear;
+      }
+
+      p {
+        padding-top: 1rem;
+      }
+
+      &:hover {
+        a {
+          color: colors.$mainColor;
+          img {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}
+
+.offers {
+  padding: 0 1rem;
+  .section-title {
+    &::before {
+      right: 0;
+      width: 150px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__card {
+    grid-column: 1/5;
+    margin: 1.5rem 0;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: filter 0.2s;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      img {
+        filter: brightness(80%);
+      }
+    }
+  }
+}
+
+.contact {
+  &__picture {
+    position: relative;
+    padding: 5rem 1rem;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../../dist/img/huracan-back.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 0;
+  }
+
+  &__text {
+    width: 100%;
+  }
+
+  &__img {
+    img {
+      width: 300px;
+    }
+  }
+
+  &__data {
+    padding: 3rem 0;
+    font-size: 1.8rem;
+    color: colors.$white;
+
+    a {
+      display: block;
+      color: colors.$white;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      span {
+        padding-right: 0.5rem;
+        font-weight: bold;
+        color: colors.$mainColor;
+      }
+
+      &:hover {
+        color: colors.$mainColor;
+      }
+    }
+  }
+
+  &__social {
+    font-size: 3rem;
+    display: flex;
+
+    a {
+      padding: 0 1rem 0 0;
+      color: colors.$mainColor;
+      transition: color 0.2s;
+
+      &:hover {
+        color: colors.$mainColorDark;
+      }
+    }
+  }
+
+  .picture-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.footer {
+  padding: 0 1rem;
+  @include dFlexJccAic;
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  color: colors.$white;
+  background-color: #000;
+
+  &__text {
+    text-align: center;
+  }
+
+  a {
+    color: colors.$white;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: colors.$mainColor;
+    }
+  }
+}
+
+@import './small';
+@import './medium';
+@import './large';
+@import './extraLarge';

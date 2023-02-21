@@ -1,0 +1,13 @@
+@media (min-width: 1200px) {
+  .header {
+    &__btn {
+      padding: 1rem 3rem;
+      font-size: 2rem;
+    }
+    &__text-desktop {
+      img {
+        width: 550px;
+      }
+    }
+  }
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MGP-GARAGE.pl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/1dcf09b718.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/css/hamburger-style.min.css" />
+    <link rel="stylesheet" href="./dist/css/style.min.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__menu">
+        <a class="nav__link" href="#">Home</a>
+        <a class="nav__link" href="#aboutus">O nas</a>
+        <a class="nav__link" href="#offers">Oferta</a>
+        <a class="nav__link" href="#contact">Kontakt</a>
+        <img src="./dist/img/mgp-logo.png" alt="MGP-logo" />
+      </div>
+      <button class="nav__btn hamburger hamburger--stand wrapper" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </nav>
+    <header class="header">
+      <div class="header__img">
+        <div class="header__text" data-aos="zoom-in" data-aos-delay="300">
+          <img src="./dist/img/mgp-logov2.png" alt="" />
+          <a class="header__btn btn-special-animation" href="#aboutus">Dowiedz się więcej</a>
+        </div>
+        <div class="picture-bg"></div>
+      </div>
+      <div class="header__text-desktop" data-aos="zoom-in" data-aos-delay="300">
+        <img src="./dist/img/mgp-logov2.png" alt="" />
+        <a class="header__btn btn-special-animation" href="#aboutus">Dowiedz się więcej</a>
+      </div>
+    </header>
+    <main>
+      <section class="aboutus wrapper" id="aboutus">
+        <h1 class="section-title">O nas</h1>
+        <div class="aboutus__box">
+          <div class="aboutus__text" data-aos="fade-right">
+            <h2>Kim jesteśmy?</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam excepturi porro iste magni vitae
+              adipisci, natus nulla quae voluptatibus quo. Minus temporibus tempore dolore maxime assumenda asperiores
+              sunt quidem quam expedita, magnam dicta delectus corrupti repudiandae porro dignissimos illum quasi fugiat
+              earum cumque alias, amet eaque quis? Repellat, perspiciatis obcaecati numquam at temporibus delectus neque
+              suscipit nostrum, voluptates rerum quasi repellendus recusandae nulla sit quisquam totam corrupti itaque
+              amet laborum. Natus quaerat qui corporis ex alias, recusandae, beatae eum maxime, quae aut suscipit harum
+              amet dolor quasi rem.
+            </p>
+          </div>
+          <div class="aboutus__photos" data-aos="fade-left" data-aos-delay="250">
+            <div class="aboutus__photos--one">
+              <img
+                src="./dist/img/rs4-huracan.jpg"
+                alt="zdjęcie lamborghini huraca twin turbo wraz z audi rs4 tankujące na stacji"
+              />
+            </div>
+            <div class="aboutus__photos--two">
+              <img src="./dist/img/rs3-black.jpg" alt="zdjęcie rs4" />
+            </div>
+            <div class="aboutus__photos--three">
+              <img src="./dist/img/rs4.jpg" alt="zdjęcie rs4" />
+            </div>
+          </div>
+        </div>
+        <div class="aboutus__box aboutus__box--two">
+          <div class="aboutus__text aboutus__text-two" data-aos="fade-left" data-aos-delay="500">
+            <h2>Nasza społeczność</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet praesentium beatae at quos aspernatur
+              quisquam soluta, dolore minima ut magni ducimus adipisci similique error reprehenderit nihil voluptate ea
+              nulla aliquam.
+            </p>
+            <div class="aboutus__social-media">
+              <div class="instagram-box">
+                <a href="https://www.instagram.com/mgp_garage/" target="_blank">
+                  <img src="./dist/img/instagram.png" alt="instagram-logo" />
+                  <p>@mgp_garage</p>
+                </a>
+              </div>
+              <div class="facebook-box">
+                <a href="https://www.facebook.com/MGPGARAGE/" target="_blank">
+                  <img src="./dist/img/facebook.png" alt="facebook-logo" />
+                  <p>MGP Garage</p>
+                </a>
+              </div>
+              <div class="youtube-box">
+                <a href="https://www.youtube.com/channel/UC-qUhlqDhM3IStm2WxLWMew" target="_blank">
+                  <img src="./dist/img/youtube.png" alt="youtube-logo" />
+                  <p>MGP GARAGE</p>
+                </a>
+              </div>
+              <div class="tiktok">
+                <a href="https://www.tiktok.com/@mgp_garage" target="_blank">
+                  <img src="./dist/img/tik-tok.png" alt="youtube-logo" />
+                  <p>@mgp_garage</p>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="aboutus__photos-two" data-aos="fade-right" data-aos-delay="750">
+            <img src="./dist/img/rs3&brabus&a35.jpg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="offers wrapper" id="offers">
+        <h1 class="section-title">Nasza oferta</h1>
+        <div class="offers__cards">
+          <div
+            class="offers__card offers__card--one"
+            data-aos="flip-left"
+            data-aos-duration="1000"
+            data-aos-delay="250"
+          >
+            <a href="https://mgp-wrap.pl/" target="_blank">
+              <img src="./dist/img/wrap.png" alt="" />
+            </a>
+          </div>
+          <div
+            class="offers__card offers__card--two"
+            data-aos="flip-left"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            <a href="https://mgp.rent/" target="_blank">
+              <img src="./dist/img/rent.png" alt="" />
+            </a>
+          </div>
+          <div
+            class="offers__card offers__card--three"
+            data-aos="flip-left"
+            data-aos-duration="1000"
+            data-aos-delay="750"
+          >
+            <a href="https://mg-premium.pl/" target="_blank">
+              <img src="./dist/img/detaling.png" alt="" />
+            </a>
+          </div>
+          <div
+            class="offers__card offers__card--four"
+            data-aos="flip-left"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+          >
+            <a href="https://allegro.pl/uzytkownik/MGP_GARAGE" target="_blank">
+              <img src="./dist/img/skelp.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h2 class="section-title">Kontakt</h2>
+        <div class="contact__picture">
+          <div class="contact__text wrapper">
+            <div class="contact__img">
+              <img src="./dist/img/mgp-logo2-small.png" alt="" />
+            </div>
+            <div class="contact__data">
+              <a href="#"><span>E-mail:</span> mail@mgp-garage.pl</a>
+              <a href="#"><span>Telefon:</span> +48 000 000 000</a>
+              <a href="#"><span>Adres:</span> Zmyślona 20</a>
+            </div>
+            <div class="contact__social">
+              <a href="https://www.instagram.com/mgp_garage/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/MGPGARAGE/" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UC-qUhlqDhM3IStm2WxLWMew" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="picture-bg"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        &copy; Copyright MGP-GARAGE <span class="footer__year"></span> - Stworzono przez
+        <a href="https://damiankolasa.pl/" target="_blank">damiankolasa.pl</a>
+      </p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./dist/js/aos.min.js"></script>
+    <script src="./dist/js/main.min.js"></script>
+  </body>
+</html>

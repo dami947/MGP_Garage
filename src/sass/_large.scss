@@ -1,0 +1,114 @@
+@media (min-width: 992px) {
+  .section-title {
+    margin: 8rem 0;
+    font-size: 4.2rem;
+
+    &::before {
+      height: 8px;
+    }
+  }
+
+  .header {
+    &__btn {
+      margin-top: 2rem;
+      padding: 0.9rem 2.7rem;
+      font-size: 1.8rem;
+    }
+    &__text-desktop {
+      img {
+        width: 450px;
+      }
+    }
+  }
+
+  .aboutus {
+    padding: 0 1rem;
+
+    &__box {
+      gap: 3rem;
+    }
+
+    &__text {
+      font-size: 1.8rem;
+    }
+
+    &__photos {
+      padding-top: 0;
+
+      &--one {
+        img {
+          height: 300px;
+        }
+      }
+      &--two {
+        img {
+          height: 200px;
+        }
+      }
+      &--three {
+        img {
+          height: 200px;
+        }
+      }
+    }
+
+    .aboutus {
+      &__social-media {
+        padding: 4rem 0;
+        .instagram-box,
+        .facebook-box,
+        .youtube-box,
+        .tiktok {
+          a {
+            font-size: 1.6rem;
+          }
+
+          img {
+            width: 55px;
+          }
+        }
+      }
+    }
+  }
+
+  .offers {
+    &__card {
+      &--one {
+        grid-column: 1/2;
+        grid-row: 1/3;
+      }
+      &--two {
+        grid-column: 2/3;
+        grid-row: 1/3;
+      }
+      &--three {
+        grid-column: 3/4;
+        grid-row: 1/3;
+      }
+      &--four {
+        grid-column: 4/5;
+        grid-row: 1/3;
+      }
+    }
+  }
+
+  .contact {
+    &__img {
+      img {
+        width: 400px;
+      }
+    }
+
+    &__data {
+      font-size: 2.2rem;
+    }
+
+    &__social {
+      font-size: 3.6rem;
+
+      a {
+        padding: 0 2rem 0 0;
+      }
+    }
+  }
+}

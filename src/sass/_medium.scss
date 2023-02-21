@@ -1,0 +1,72 @@
+@media (min-width: 768px) {
+  .sticky-body {
+    overflow: auto;
+  }
+
+  .section-title {
+    margin: 6rem 0;
+  }
+
+  .nav {
+    &__menu {
+      height: 100%;
+      width: auto;
+      padding: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border: 2px solid colors.$mainColor;
+      border-left: none;
+    }
+    &__link {
+      font-size: 2.4rem;
+    }
+  }
+
+  .header {
+    &__img {
+      grid-column: 2/3;
+    }
+
+    &__text {
+      display: none;
+    }
+
+    &__text-desktop {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      @include dFlexColumnJccAic;
+      img {
+        width: 350px;
+      }
+    }
+  }
+
+  .aboutus {
+    &__box {
+      gap: 3rem;
+    }
+
+    &__text {
+      grid-column: 1/2;
+    }
+
+    &__text-two {
+      grid-column: 2/3;
+    }
+
+    &__photos {
+      padding-top: 0;
+      grid-column: 2/3;
+      gap: 1rem;
+    }
+
+    &__photos-two {
+      padding-top: 0;
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+  }
+}
