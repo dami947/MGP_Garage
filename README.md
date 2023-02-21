@@ -42,7 +42,6 @@ Designed by me with figma and coded page for MGP Garage. The website aims to pre
 
 
 
-
 ## Demo
 
 https://dami947.github.io/MGP_Garage/
