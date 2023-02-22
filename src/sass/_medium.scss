@@ -8,20 +8,16 @@
   }
 
   .nav {
-    &__menu {
-      height: 100%;
-      width: auto;
-      padding: 4rem;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 20px;
-      border: 2px solid colors.$mainColor;
-      border-left: none;
-    }
     &__link {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
+    }
+
+    &__menu-social {
+      display: flex;
+      a {
+        padding: 2rem 1rem;
+        font-size: 4rem;
+      }
     }
   }
 
